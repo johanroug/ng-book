@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {Article} from "./article.model";
 
 @Component({
@@ -9,14 +9,7 @@ import {Article} from "./article.model";
   }
 })
 export class ArticleComponent {
-  article: Article;
-
-  constructor() {
-    this.article = new Article(
-      "Angular 2",
-      "http://google.com",
-      10);
-  }
+  @Input() article: Article;
 
   public voteUp(): boolean {
     this.article.voteUp();
