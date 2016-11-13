@@ -5,5 +5,8 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'app works!';
+  public addArticle(title: HTMLInputElement, link: HTMLInputElement) {
+    console.log(`added ${title.value} and ${link.value}`);
+    return false;
+  }
 }
